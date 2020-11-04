@@ -8,6 +8,9 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/gradle-plugin/reference/html/#build-image)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.3.5.RELEASE/reference/htmlsingle/#using-boot-devtools)
+* [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/2.3.5.RELEASE/reference/html/#reference)
+* [H2 Database](https://www.h2database.com/html/main.html)
+* [HTTPie](https://httpie.io/docs)
 
 ### Guides
 The following guides illustrate how to use some features concretely:
