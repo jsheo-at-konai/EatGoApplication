@@ -15,6 +15,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.assertj.core.util.Arrays.asList;
 import static org.hamcrest.core.StringContains.containsString;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
@@ -50,7 +51,8 @@ class RestaurantControllerTests {
     @Test
     public void detail() throws Exception {
         Restaurant mockRestaurant1 = Restaurant.builder().id(1004L).name("Meal").address("Seoul").build();
-        mockRestaurant1.addMenuItem(MenuItem.builder().name("Kimchi").build());
+        List<Object> mockMenuItems = asList(MenuItem.builder().name("Kimchi").build());
+        mockRestaurant1.setMenuItems(mockMenuItems);
         Restaurant mockRestaurant2 = Restaurant.builder().id(2020L).name("CyberFood").address("BUsan").build();
 
         given(restaurantService.getRestaurant(1004L)).willReturn(mockRestaurant1);

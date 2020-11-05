@@ -44,6 +44,7 @@ public class RestaurantService {
         restaurant.updateInformation(name, address);
 
         return restaurant;
+        
     }
 
 }

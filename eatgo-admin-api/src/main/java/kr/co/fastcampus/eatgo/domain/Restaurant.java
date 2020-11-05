@@ -30,14 +30,8 @@ public class Restaurant {
         return name + " in " + address;
     }
 
-    public void addMenuItem(MenuItem menuItem) {
-        menuItem.setRestaurantId(this.id);
-
-        if (null == menuItems) {
-            menuItems = new ArrayList<>();
-        }
-
-        menuItems.add(menuItem);
+    public void setMenuItems(List<MenuItem> menuItems) {
+        this.menuItems = new ArrayList<>(menuItems);
     }
 
     public void updateInformation(String name, String address) {

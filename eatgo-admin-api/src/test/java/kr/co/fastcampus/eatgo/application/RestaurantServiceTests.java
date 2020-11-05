@@ -37,7 +37,8 @@ class RestaurantServiceTests {
         long testId = 1004L;
         Restaurant mockRestaurant = Restaurant.builder().id(testId).name("Meal").address("Seoul").build();
         String testMenuItem = "Kimchi";
-        mockRestaurant.addMenuItem(MenuItem.builder().name(testMenuItem).build());
+        List<MenuItem> testMenuItems = asList(MenuItem.builder().name(testMenuItem).build());
+        mockRestaurant.setMenuItems(testMenuItems);
         given(restaurantRepository.findById(testId)).willReturn(Optional.of(mockRestaurant));
 
         Restaurant restaurant = restaurantService.getRestaurant(testId);
